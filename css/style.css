@@ -129,21 +129,7 @@ body {
 }
 
 #dig .blink {
-    animation: blink 1s infinite ease-in-out;
     font-size: 7rem;
     color: rgb(105, 231, 248);
-}
-
-@keyframes blink {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
+    transition: all 150ms ease-in-out;
 }
