@@ -14,13 +14,13 @@ setInterval(() => {
     sc = day.getSeconds();
     mn = day.getMinutes();
     hr = day.getHours();
-    dh.textContent = toFixed2(hr % 12);
+    dh.textContent = toFixed2(hr % 12 > 0 ? hr % 12 : 12);
     dm.textContent = toFixed2(mn);
     ds.textContent = toFixed2(sc);
     apm.textContent = hr > 11 ? 'PM' : 'AM';
-    h.style.transform = `rotateZ(${(hr%12+mn/60+sc/3600)*da*5}deg)`;
-    m.style.transform = `rotateZ(${(mn+sc/60)*da}deg)`;
-    s.style.transform = `rotateZ(${sc*da}deg)`;
+    h.style.transform = `rotateZ(${(hr % 12 + mn / 60 + sc / 3600) * da * 5}deg)`;
+    m.style.transform = `rotateZ(${(mn + sc / 60) * da}deg)`;
+    s.style.transform = `rotateZ(${sc * da}deg)`;
 }, 200);
 
 function toFixed2(str) {
