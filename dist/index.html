@@ -40,6 +40,13 @@
     </div>
 
     <script src="js/app.min.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('js/serviceWorker.js')
+        })
+      }
+    </script>
 </body>
 
 </html>
