@@ -1,6 +1,6 @@
 {
-    "name": "Analog Clock",
-    "short_name": "Analog Clock",
+    "name": "Dark Analog Clock",
+    "short_name": "Clock",
     "icons": [{
             "src": "android-chrome-192x192.png",
             "sizes": "192x192",
@@ -12,7 +12,9 @@
             "type": "image/png"
         }
     ],
+    "start_url": ".",
     "theme_color": "#90bada",
     "background_color": "#90bada",
-    "display": "standalone"
+    "display": "standalone",
+    "orientation": "portrait"
 }

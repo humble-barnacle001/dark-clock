@@ -15,6 +15,7 @@
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="msapplication-config" content="browserconfig.xml">
     <meta name="theme-color" content="#90bada">
+    <meta name="description" content="Dark themed analog clock with digital display also!!">
     <title>Clock</title>
 </head>
 
@@ -43,7 +44,7 @@
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('js/serviceWorker.js')
+          navigator.serviceWorker.register('serviceWorker.js')
         })
       }
     </script>
