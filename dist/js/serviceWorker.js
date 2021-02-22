@@ -9,9 +9,22 @@ workbox.routing.registerRoute(
   new workbox.strategies.CacheFirst({
     cacheName: 'image-cache',
     plugins: [
-      new workbox.expiration.Plugin({
+      new workbox.expiration.ExpirationPlugin({
         maxEntries: 20,
         maxAgeSeconds: 7 * 24 * 60 * 60
+      })
+    ]
+  })
+);
+
+workbox.routing.registerRoute(
+  /\.(?:css)$/,
+  new workbox.strategies.CacheFirst({
+    cacheName: 'style-cache',
+    plugins: [
+      new workbox.expiration.ExpirationPlugin({
+        maxEntries: 20,
+        maxAgeSeconds: 24 * 60 * 60
       })
     ]
   })
